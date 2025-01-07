@@ -15,7 +15,7 @@ The problem is to predict whether or not passengers on the Space Titanic are tra
 This is a classification problem and has many missing entries (we get the information from a damaged computer core).
 I use tools from pandas, scikit-learn, XGBoost, and keras most intensively.
 
-## 3. Data Structure — [Data ingest script](https://github.com/jensenrichardson/dna-preprocess/blob/main/parse_samples.py)
+## 3. Data Structure — [Data Ingest Script](https://github.com/jensenrichardson/dna-preprocess/blob/main/parse_samples.py)
 The data ingest script I wrote while a part of the Big Data in Biology lab at UT was used to start an intensive data pipeline (available in the same repository).
 The specific script available here comprehends a complex data structure (that of individual paired reads (two in a lane), with multiple lanes per sample) and not only
 verifies that structure, but makes the structure available for other commands in the pipeline.
