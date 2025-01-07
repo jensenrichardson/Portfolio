@@ -19,4 +19,4 @@ I use tools from pandas, scikit-learn, XGBoost, and keras most intensively.
 The data ingest script I wrote while a part of the Big Data in Biology lab at UT was used to start an intensive data pipeline (available in the same repository).
 The specific script available here comprehends a complex data structure (that of individual paired reads (two in a lane), with multiple lanes per sample) and not only
 verifies that structure, but makes the structure available for other commands in the pipeline.
-It is well commented, well structured, and flexible code that I used to extend other parts of the pipeline over the course of a year and a half (the git history is fairly blank because almost all of my work was completed on a headless cluster at [TACC](tacc.utexas.edu).
+It is well commented, well structured, and flexible code that I used to extend other parts of the pipeline over the course of a year and a half (the git history is fairly blank because almost all of my work was completed on a headless cluster at [TACC](https://www.tacc.utexas.edu).
