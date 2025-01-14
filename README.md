@@ -17,6 +17,10 @@ I use tools from pandas, scikit-learn, XGBoost, and keras most intensively.
 
 ## 3. Data Structure — [Data Ingest Script](https://github.com/jensenrichardson/dna-preprocess/blob/main/parse_samples.py)
 The data ingest script I wrote while a part of the Big Data in Biology lab at UT was used to start an intensive data pipeline (available in the same repository).
-The specific script available here comprehends a complex data structure (that of individual paired reads (two in a lane), with multiple lanes per sample) and not only
+The specific script available here comprehends a complex data structure, and not only
 verifies that structure, but makes the structure available for other commands in the pipeline.
-It is well commented, well structured, and flexible code that I used to extend other parts of the pipeline over the course of a year and a half (the git history is fairly blank because almost all of my work was completed on a headless cluster at [TACC](https://www.tacc.utexas.edu).
+
+The structure is that of a single sample of genetic information, ie one person. Within that sample are readgroups, which would be a specific run of a sequencing machine. Finally, each readgroup is made of two individual read files (read one and read two) which is a byproduct of the sequencing process.
+Each level of the structure is used in different stages of the end pipeline, so different tools may require different sorts of outputs. For example, a tool that aligns the individual reads to a reference genome may operate only at the read file level (it only refers to the two read files) and one that calls genetic mutations would operate on a whole sample so it would need information on all the readgroups that a single sample has.
+
+The script is well commented, well structured, and flexible code that I used to extend other parts of the pipeline over the course of a year and a half (the git history is fairly blank because almost all of my work was completed on a headless cluster at [TACC](https://www.tacc.utexas.edu).
