@@ -5,7 +5,7 @@ My name is Jensen Richardson and I am a recent graduate and aspiring data scient
 tools to provide insights. I am searching for a place to continue my ambition to discover, learn, and solve
 unfamiliar problems.
 
-## Project Nutrition Facts
+## Nutrition Facts for my Projects
 1. Regression — [Kaggle's House Price Challenge](https://www.kaggle.com/code/jensenrichardson/house-prices-prediction)
    * Goal: Predict home prices in Ames, Iowa.
    * Data: Observations are houses with features that include sale price, age, quality, rooms, etc.
