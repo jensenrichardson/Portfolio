@@ -11,7 +11,7 @@ unfamiliar problems.
    * Data: Observations are houses with features that include sale price, age, quality, rooms, etc.
    * Tools: pandas, scikit-learn, keras
 3. Classification — [Kaggle's Space Titanic Disaster Challenge](https://www.kaggle.com/code/jensenrichardson/space-titanic-model)
-   * Goal: Predict whether passengers on the ``space titanic'' would be saved from a space anomaly.
+   * Goal: Predict whether passengers on the "space titanic" would be saved from a space anomaly.
    * Data: Observations are passengers with features of whether they were saved, cabin location, age, name, etc.
    * Tools: pandas, scikit-learn, XGBoost, keras
 5. Data Structure — [Data Ingest Script](https://github.com/jensenrichardson/dna-preprocess/blob/main/parse_samples.py)
