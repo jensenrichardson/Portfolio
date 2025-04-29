@@ -10,14 +10,18 @@ unfamiliar problems.
    * Goal: Predict home prices in Ames, Iowa.
    * Data: Observations are houses with features that include sale price, age, quality, rooms, etc.
    * Tools: pandas, scikit-learn, keras
-3. Classification — [Kaggle's Space Titanic Disaster Challenge](https://www.kaggle.com/code/jensenrichardson/space-titanic-model)
+2. Classification — [Kaggle's Space Titanic Disaster Challenge](https://www.kaggle.com/code/jensenrichardson/space-titanic-model)
    * Goal: Predict whether passengers on the "space titanic" would be saved from a space anomaly.
    * Data: Observations are passengers with features of whether they were saved, cabin location, age, name, etc.
    * Tools: pandas, scikit-learn, XGBoost, keras
-5. Data Structure — [Data Ingest Script](https://github.com/jensenrichardson/dna-preprocess/blob/main/parse_samples.py)
+3. Data Structure — [Data Ingest Script](https://github.com/jensenrichardson/dna-preprocess/blob/main/parse_samples.py)
    * Goal: Parse the structure of genomic sample names to be fed into an analysis pipeline.
    * Data: Folder of samples of genomic data which gets split into a nested data structure.
    * Tools: pandas, regex, core python
+4. Data Visualization — [Food Inspections Visualizations](https://www.kaggle.com/code/jensenrichardson/king-county-food-inspections)
+   * Goal: Visualize by time and location food inspection scores from King County
+   * Data: King County's [Food Establishment Inspection Data](https://data.kingcounty.gov/Health-Wellness/Food-Establishment-Inspection-Data/f29f-zza5/about_data)
+   * Tools: Pandas, matplotlib, folium, geopandas
 
 ## 1. Regression — [Kaggle's Ames Iowa House Price Challenge](https://www.kaggle.com/code/jensenrichardson/house-prices-prediction)
 In the following notebook, I go through several different models to predict house prices for homes in Ames, Iowa.
@@ -48,3 +52,13 @@ Some background information not meant for the script itself:
   * The structure is that of a single sample of genetic information, ie one person. Within that sample are readgroups, which would be a specific run of a sequencing machine. Finally, each readgroup is made of two individual read files (read one and read two) which is a byproduct of the sequencing process
   * Each level of the structure is used in different stages of the end pipeline, so different tools may require different sorts of outputs. For example, a tool that aligns the individual reads to a reference genome may operate only at the read file level (it only refers to the two read files) and one that calls genetic mutations would operate on a whole sample so it would need information on all the readgroups that a single sample has.
   * The script is well commented, well structured, and flexible code that I used to extend other parts of the pipeline over the course of a year and a half (the git history is fairly blank because almost all of my work was completed on a headless cluster at [TACC](https://www.tacc.utexas.edu).
+
+## 4. Data Visualization — [King County Food Inspections Visualizations](https://www.kaggle.com/code/jensenrichardson/king-county-food-inspections)
+In this notebook, I visualize the King County Food Inspections Database — this was not based on a previously existing Kaggle challenge.
+After a brief data analysis, I analyze both the food inspection scores for Starbucks and for the whole county.
+I use tools from Pandas, matplotlib, folium, and geopandas.
+
+I create data visualizations for time based analysis, heatmaps in the county, and choropleths by zipcode.
+ * time based analysis, which includes a rolling trendline
+ * time-animated heatmaps for inspection scores across the county, and
+ * choropleths by zipcode that also include time sliders and popups.
